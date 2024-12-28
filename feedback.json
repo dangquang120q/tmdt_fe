@@ -1,0 +1,20 @@
+{
+  "rate_avg": 4.5,
+  "rates": [0, 0, 0, 1, 1],
+  "comments": [
+    {
+      "name": "Connie",
+      "avatar": "",
+      "rate": 5,
+      "content": "I like the thick consistency of this lip liner! And I really like that the pencil is not thin.",
+      "createdAt": 1712772903783
+    },
+    {
+      "name": "Quincy",
+      "avatar": "",
+      "rate": 4,
+      "content": "It’s a really pretty color! I loved it so much 🩷",
+      "createdAt": 1712772904783
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.shop-page {
+  .filter {
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  .book-container {
+    // max-width: 1320px;
+    margin: 20px auto;
+  }
+}

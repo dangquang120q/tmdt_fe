@@ -1,0 +1,25 @@
+.order-item {
+  background-color: #fff;
+  padding: 20px;
+  .id {
+    margin-bottom: 15px;
+  }
+  .total {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 30px;
+    position: relative;
+    span {
+      font-size: 24px;
+      color: var(--primary-color);
+      margin-left: 20px;
+    }
+    .app-button {
+      position: absolute;
+      bottom: -5px;
+      padding: 10px 20px;
+    }
+  }
+}

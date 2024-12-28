@@ -1,0 +1,21 @@
+.public-layout_navbar {
+    border-bottom: 1px solid var(--color-border);
+
+    .navbar-inner {
+        max-width: 1290px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-item {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 1.4em 1.75em;
+
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+}

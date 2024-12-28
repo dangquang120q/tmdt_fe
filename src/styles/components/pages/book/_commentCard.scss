@@ -1,0 +1,36 @@
+.comment-card {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  .user-comment,
+  .reply-comment {
+    padding: 40px 0;
+    display: flex;
+    gap: 20px;
+  }
+  .reply-comment {
+    padding: 0 0 40px;
+    .user-info {
+      justify-content: end;
+    }
+  }
+  .user-info {
+    display: flex;
+    font-size: 16px;
+    gap: 15px;
+    width: 200px;
+  }
+  .comment-info {
+    flex: 1;
+    .rate-date {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .date {
+        font-size: 14px;
+      }
+    }
+    .comment-content {
+      font-size: 16px;
+    }
+  }
+}

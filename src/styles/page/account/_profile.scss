@@ -1,0 +1,27 @@
+.profile-form {
+  label:not(.ant-radio-wrapper) {
+    font-weight: 600;
+  }
+  .ant-form-item-control {
+    max-width: 300px;
+  }
+  .ant-form-item-label {
+    width: 120px;
+  }
+  .ant-picker {
+    width: 100%;
+  }
+  input[readOnly] {
+    border: none;
+  }
+  .profile-avatar {
+    flex: 1;
+    .app-button {
+      margin-left: 27px;
+    }
+    .ant-avatar {
+      border: 2px solid var(--color-border);
+      margin-bottom: 15px;
+    }
+  }
+}

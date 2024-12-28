@@ -1,0 +1,12 @@
+.purchase {
+  h1 {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .purchase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

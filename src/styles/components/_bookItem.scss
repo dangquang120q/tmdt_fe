@@ -1,0 +1,130 @@
+.product-item {
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+  height: 100%;
+  &_img {
+    position: relative;
+    height: 0;
+    padding-top: 125%;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      object-position: center center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-tag {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      background: #ffffff;
+      color: #808284;
+      border: none;
+      padding: 0.5em 1em 0.35em 1em;
+    }
+  }
+  &_info {
+    display: block;
+    color: inherit;
+    margin: 16px 14px;
+    font-size: 14px;
+    text-align: center;
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+  }
+  .product-item_price-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5em;
+  }
+  .product-options {
+    margin-inline-end: 20px;
+    font-size: 12px;
+    line-height: 1.4em;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  &:hover {
+    .product-item_img img {
+      scale: 1.5;
+    }
+  }
+}
+.product-options {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_inner {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    height: 26px;
+  }
+  &_arrow {
+    flex: 1;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  &_slide {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 0;
+    transition: all 50ms;
+  }
+  &_item {
+    width: 14px;
+    height: 14px;
+    margin: 6px 4px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    img {
+      object-position: center center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      box-shadow: 0 0 0 3px var(--bg, #ffffff), 0 0 0 4px rgba(50, 50, 50, 0.3);
+    }
+  }
+  &.cc-start {
+    .product-options_slide {
+      left: 0;
+    }
+    .product-options_arrow.back {
+      display: none;
+    }
+  }
+  &.cc-end {
+    .product-options_slide {
+      right: 0;
+    }
+    .product-options_arrow.forward {
+      display: none;
+    }
+  }
+}

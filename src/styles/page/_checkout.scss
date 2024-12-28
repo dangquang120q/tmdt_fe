@@ -1,0 +1,169 @@
+$bg-color: ghostwhite;
+
+.checkout {
+  .title {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .delivery-address {
+    padding: 28px 30px 24px;
+    background-color: $bg-color;
+    &-border {
+      background-image: repeating-linear-gradient(
+        45deg,
+        #6fa6d6,
+        #6fa6d6 33px,
+        transparent 0,
+        transparent 41px,
+        #f18d9b 0,
+        #f18d9b 74px,
+        transparent 0,
+        transparent 82px
+      );
+      background-position-x: -30px;
+      background-size: 116px 3px;
+      height: 3px;
+      width: 100%;
+    }
+    .ant-space {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .cart-table {
+    .ant-table-thead .ant-table-cell {
+      color: var(--light);
+      font-weight: 400;
+    }
+    h2.table-title {
+      font-size: 18px;
+      color: #000;
+    }
+    .product-info {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    * {
+      background: transparent !important;
+    }
+  }
+  .product-ordered {
+    padding: 10px 30px 24px;
+    background-color: $bg-color;
+    margin-top: 20px;
+    .total {
+      width: 100%;
+      justify-content: flex-end;
+      gap: 30px;
+      padding-top: 18px;
+      padding-right: 50px;
+      p {
+        font-size: 16px;
+        color: var(--light);
+      }
+      b,
+      b * {
+        color: var(--primary-color);
+        font-size: 20px;
+      }
+    }
+  }
+  .shipping-voucher {
+    margin: 20px 0;
+    background-color: $bg-color;
+  }
+  .shipping {
+    padding: 28px 30px 18px;
+    border-bottom: 1px dashed gainsboro;
+
+    .ant-radio-wrapper {
+      .ant-radio {
+        display: none;
+      }
+      .shipping-item {
+        padding: 8px 10px;
+        border: 2px solid gainsboro;
+        border-radius: 8px;
+        min-width: 220px;
+        .desc {
+          font-size: 13px;
+          color: #26aa99;
+        }
+      }
+      &-checked {
+        .shipping-item {
+          border-color: var(--primary-color);
+        }
+      }
+    }
+    .shipping-total {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 50px;
+      h2 {
+        font-size: 18px;
+      }
+      b {
+        font-size: 20px;
+        color: var(--primary-color);
+      }
+      margin-bottom: 15px;
+    }
+  }
+  .voucher {
+    padding: 28px 30px 18px;
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h2 {
+        font-size: 18px;
+      }
+    }
+    .ant-form-item {
+      margin: 0;
+    }
+  }
+  .payment {
+    background-color: $bg-color;
+    margin-bottom: 20px;
+    .payment-method {
+      padding: 28px 30px 18px;
+      border-bottom: 1px dashed gainsboro;
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        font-size: 18px;
+      }
+    }
+    .total {
+      padding: 28px 30px;
+      border-bottom: 1px dashed gainsboro;
+
+      p {
+        margin-bottom: 10px;
+      }
+      &-value {
+        text-align: end;
+        h2,
+        h2 * {
+          font-size: 24px;
+          color: var(--primary-color);
+        }
+      }
+    }
+    .btn-order {
+      width: 100%;
+      background-color: var(--primary-color);
+      color: #fff;
+      margin-top: 15px;
+      font-size: 20px;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.purchase-order-item {
+  background-color: #fff;
+  margin-bottom: 15px;
+  .order-header {
+    padding: 16px 30px 16px;
+    display: flex;
+    justify-content: space-between;
+    .status {
+      color: #26aa99;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  .total {
+    padding: 16px 30px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    p {
+      font-size: 18px;
+    }
+    b {
+      color: var(--primary-color);
+      font-size: 22px;
+    }
+  }
+}

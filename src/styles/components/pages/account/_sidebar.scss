@@ -1,0 +1,44 @@
+.account-sidebar {
+  width: 200px;
+  .user-info {
+    display: flex;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    .avatar {
+      flex: 1;
+    }
+  }
+  .user-name {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .email {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: var(--text);
+    }
+  }
+  .account-menu {
+    margin-top: 27px;
+    .account-menu-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 15px;
+      &.active {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.success-wrapper {
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  padding-top: 32px;
+  .logo {
+    padding: 32px;
+    img {
+      width: 200px;
+    }
+  }
+  .footer {
+    width: 100%;
+  }
+  .success {
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #dcdcdc;
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .icon {
+      color: green;
+      font-size: 40px;
+    }
+    h2 {
+      text-transform: capitalize;
+      margin: 0px;
+      font-weight: 900;
+      font-size: 40px;
+      color: #324d67;
+    }
+    .email-msg {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin: 10px;
+      //   margin-top: 30px;
+    }
+    .description .email {
+      margin-left: 5px;
+      color: #f02d34;
+    }
+  }
+}

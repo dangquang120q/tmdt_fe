@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+// font
+$nunito: "Nunito Sans";
+$lato: "Lato";
+
+//Lato
+@font-face {
+  font-family: $lato;
+  src: url("resources/font/lato/Lato-Light.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $lato;
+  src: url("resources/font/lato/Lato-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $lato;
+  src: url("resources/font/lato/Lato-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+//Nunito
+@font-face {
+  font-family: $nunito;
+  src: url("resources/font/nunito/NunitoSans_7pt_Condensed-Light.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $nunito;
+  src: url("resources/font/nunito/NunitoSans_7pt_Condensed-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $nunito;
+  src: url("resources/font/nunito/NunitoSans_7pt_Condensed-Medium.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $nunito;
+  src: url("resources/font/nunito/NunitoSans_7pt_Condensed-SemiBold.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $nunito;
+  src: url("resources/font/nunito/NunitoSans_7pt_Condensed-Bold.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}

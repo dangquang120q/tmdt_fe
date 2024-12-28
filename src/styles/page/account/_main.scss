@@ -1,0 +1,11 @@
+@import "./cart";
+@import "./profile";
+@import "./checkoutSuccess";
+@import "./purchase";
+@import "./order.scss";
+
+.cart,
+.profile {
+  background-color: #fff;
+  padding: 20px;
+}

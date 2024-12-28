@@ -1,0 +1,26 @@
+#components-layout-demo-custom-trigger {
+  min-height: 100vh;
+  .trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .trigger:hover {
+    color: #1890ff;
+  }
+  .logo {
+    height: 32px;
+    margin: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    path {
+      fill: #fff;
+    }
+    path:first-child {
+      fill: #f65d4e;
+    }
+  }
+}

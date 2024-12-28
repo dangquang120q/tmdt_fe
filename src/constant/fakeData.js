@@ -1,0 +1,286 @@
+export const category = [
+  {
+    id: 1,
+    name: "Lip",
+    description: "",
+    key: "Lip",
+  },
+  {
+    id: 2,
+    name: "Eye",
+    description: "",
+    key: "Eye",
+  },
+  {
+    id: 3,
+    name: "Face",
+    description: "",
+    key: "Face",
+  },
+  {
+    id: 4,
+    name: "Nail",
+    description: "",
+    key: "Nail",
+  },
+  {
+    id: 5,
+    name: "Gift & Sets",
+    description: "",
+    key: "gift-set",
+  },
+];
+export const item = {
+  lineId: 1,
+  name: "Lip Mate Pencil",
+  brand: "Romand",
+  variantName: "Color",
+  rate: 5,
+  category: 1,
+  default_price: 17.9,
+  weight: "5g",
+
+  description:
+    "Natural Lip Colored Lip Pencil for natural lip line drawing, drawing overlips, and covering dark lips perfectly! Natural and gorgeous overlip make up is ready for you!",
+  images: [
+    {
+      id: 1,
+      link: "https://romand.us/cdn/shop/files/1_ff92497a-a9ca-4e4c-8b96-a098aada8bea.jpg?v=1691111263&width=720",
+    },
+    {
+      id: 2,
+      link: "https://romand.us/cdn/shop/files/2_1d27cf22-0724-40f1-a327-7e0a6f7de9c4.jpg?v=1691111518&width=720",
+    },
+  ],
+  options: [
+    {
+      id: 101,
+      name: "01 Tendery Peach",
+      price: 17.9,
+      quantity: 3,
+      featured_image:
+        "https://romand.us/cdn/shop/files/01_tenderly_peach_128x128_crop_center.png?v=13070476343320421641",
+      image: "https://romand.us/cdn/shop/files/1-1.jpg?v=1691111518&width=720",
+    },
+    {
+      id: 102,
+      name: "02 Dovey Pink",
+      price: 17.9,
+      quantity: 3,
+      featured_image:
+        "https://romand.us/cdn/shop/files/02_dovey_pink_128x128_crop_center.png?v=1965287969599344231",
+      image: "https://romand.us/cdn/shop/files/1-2.jpg?v=1691111518&width=720",
+    },
+    {
+      id: 103,
+      name: "03 Kaya Beige",
+      price: 17.9,
+      quantity: 3,
+      featured_image:
+        "https://romand.us/cdn/shop/files/03_kaya_beige_128x128_crop_center.png?v=4116450644656867866",
+      image: "https://romand.us/cdn/shop/files/1-3.jpg?v=1691111518&width=720",
+    },
+    {
+      id: 104,
+      name: "04 Fig Breeze",
+      price: 17.9,
+      quantity: 3,
+      featured_image:
+        "https://romand.us/cdn/shop/files/04_fig_breeze_128x128_crop_center.png?v=8162978144654687666",
+      image: "https://romand.us/cdn/shop/files/1-4.jpg?v=1691111518&width=720",
+    },
+    {
+      id: 105,
+      name: "05 Taupey shade",
+      price: 17.9,
+      quantity: 3,
+      featured_image:
+        "https://romand.us/cdn/shop/files/05_taupey_shade_128x128_crop_center.png?v=3627462173044548656",
+      image: "https://romand.us/cdn/shop/files/1-5.jpg?v=1691111518&width=720",
+    },
+  ],
+};
+export const review = {
+  rate_avg: 4.5,
+  rates: [0, 0, 0, 1, 1],
+  comments: [
+    {
+      name: "Connie",
+      avatar: "",
+      rate: 5,
+      content:
+        "I like the thick consistency of this lip liner! And I really like that the pencil is not thin.",
+      createdAt: 1712772903783,
+    },
+    {
+      name: "Quincy",
+      avatar: "",
+      rate: 4,
+      content: "It’s a really pretty color! I loved it so much 🩷",
+      createdAt: 1712772904783,
+    },
+  ],
+};
+const expItem = {
+  token: "Z2NwLWFzaWEtc291dGhlYXN0MTowMUhUOThYOENNRjI1VzE0MUNDSzZETUszOQ",
+  note: "",
+  attributes: {},
+  original_total_price: 1790,
+  total_price: 1790,
+  total_discount: 0,
+  total_weight: 13.0408,
+  item_count: 2,
+  items: [
+    {
+      id: 44673700298984,
+      properties: { ":": "free" },
+      quantity: 1,
+      variant_id: 44673700298984,
+      key: "44673700298984:54c2013639ab89c6f20067477cacd206",
+      title: "[FREE GIFT] Juicy Lasting Tint Warm \u0026amp; Cool Sample 1pc",
+      price: 0,
+      original_price: 0,
+      presentment_price: 0.0,
+      discounted_price: 0,
+      line_price: 0,
+      original_line_price: 0,
+      total_discount: 0,
+      discounts: [],
+      sku: "RNCM05-Ls",
+      grams: 0,
+      vendor: "Rom\u0026nd US Official",
+      taxable: true,
+      product_id: 8296048034024,
+      product_has_only_default_variant: true,
+      gift_card: false,
+      final_price: 0,
+      final_line_price: 0,
+      url: "/products/free-gift-juicy-lasting-tint-warm-cool-sample-1pc-1?variant=44673700298984",
+      featured_image: {
+        aspect_ratio: 0.838,
+        alt: "[FREE GIFT] Juicy Lasting Tint Warm \u0026 Cool Sample 1pc",
+        height: 3564,
+        url: "https://cdn.shopify.com/s/files/1/0604/2887/8056/products/RNCM05-Ls.png?v=1691390479",
+        width: 2986,
+      },
+      image:
+        "https://cdn.shopify.com/s/files/1/0604/2887/8056/products/RNCM05-Ls.png?v=1691390479",
+      handle: "free-gift-juicy-lasting-tint-warm-cool-sample-1pc-1",
+      requires_shipping: true,
+      product_type: "singleton_gift",
+      product_title:
+        "[FREE GIFT] Juicy Lasting Tint Warm \u0026 Cool Sample 1pc",
+      product_description: "",
+      variant_title: null,
+      variant_options: ["Default Title"],
+      options_with_values: [{ name: "Title", value: "Default Title" }],
+      line_level_discount_allocations: [],
+      line_level_total_discount: 0,
+      has_components: false,
+    },
+    {
+      id: 44667339309288,
+      properties: {},
+      quantity: 1,
+      variant_id: 44667339309288,
+      key: "44667339309288:75b5d9285b023c6fba2ef63287dc95df",
+      title: "Lip Mate Pencil - 01 Tendery Peach",
+      price: 1790,
+      original_price: 1790,
+      presentment_price: 17.9,
+      discounted_price: 1790,
+      line_price: 1790,
+      original_line_price: 1790,
+      total_discount: 0,
+      discounts: [],
+      sku: "RNCM31-L01",
+      grams: 13,
+      vendor: "Rom\u0026nd US Official",
+      taxable: true,
+      product_id: 8292674568424,
+      product_has_only_default_variant: false,
+      gift_card: false,
+      final_price: 1790,
+      final_line_price: 1790,
+      url: "/products/lip-mate-pencil?variant=44667339309288",
+      featured_image: {
+        aspect_ratio: 0.667,
+        alt: "Lip Mate Pencil",
+        height: 2250,
+        url: "https://cdn.shopify.com/s/files/1/0604/2887/8056/files/1-1.jpg?v=1691111518",
+        width: 1500,
+      },
+      image:
+        "https://cdn.shopify.com/s/files/1/0604/2887/8056/files/1-1.jpg?v=1691111518",
+      handle: "lip-mate-pencil",
+      requires_shipping: true,
+      product_type: "Lipstick",
+      product_title: "Lip Mate Pencil",
+      product_description:
+        "Natural Lip Colored Lip Pencil for natural lip line drawing, drawing overlips, and covering dark lips perfectly! Natural and gorgeous overlip make up is ready for you!",
+      variant_title: "01 Tendery Peach",
+      variant_options: ["01 Tendery Peach"],
+      options_with_values: [{ name: "Color", value: "01 Tendery Peach" }],
+      line_level_discount_allocations: [],
+      line_level_total_discount: 0,
+      has_components: false,
+    },
+  ],
+  requires_shipping: true,
+  currency: "USD",
+  items_subtotal_price: 1790,
+  cart_level_discount_applications: [],
+};
+export const shipping = [
+  {
+    id: 1,
+    name: "Free Ship",
+    value: 0,
+    description: "Guaranteed to receive within 5-7 days",
+  },
+  {
+    id: 2,
+    name: "Fast",
+    value: 5,
+    description: "Guaranteed to receive within 2-4 days",
+  },
+  {
+    id: 3,
+    name: "Express",
+    value: 10,
+    description: "Guaranteed to receive within 24 hours",
+  },
+];
+export const payment = [
+  {
+    value: "cash",
+    label: "Cash on Delivery",
+  },
+  {
+    value: "zalopay",
+    label: "Cash on Zalo Pay",
+  },
+];
+
+export const voucher = [
+  {
+    id: 1,
+    name: "Sale 10%",
+    discountPercent: 0.1,
+    discountAmount: 0,
+    description: "Sale 10%",
+    startDate: undefined,
+    endDate: undefined,
+    quantity: -1,
+  },
+  {
+    id: 2,
+    name: "Sale 15%",
+    discountPercent: 0.15,
+    discountAmount: 0,
+    description: "Sale 15%",
+    startDate: undefined,
+    endDate: undefined,
+    quantity: -1,
+  },
+];

@@ -1,0 +1,24 @@
+.account-page {
+  width: 100%;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 250px);
+  .account-title {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+.account-page-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 20px 0 50px;
+}
+.account-page-children {
+  margin-left: 27px;
+  width: 100%;
+}

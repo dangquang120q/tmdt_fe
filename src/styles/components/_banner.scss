@@ -1,0 +1,41 @@
+.home-banner {
+    position: relative;
+
+    .banner-image {
+        width: 100%;
+        min-height: 600px;
+        object-fit: cover;
+    }
+
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        text-align: center;
+        transform: translateY(-40%);
+
+        .small-title {
+            color: var(--light);
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 63px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .small-title-red {
+            font-size: 16px;
+            color: var(--primary-color);
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}
