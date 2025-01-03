@@ -39,7 +39,7 @@ function ProductItem({ className = "", noFlex = false, item }) {
     <div className={`product-item ${className} ${noFlex ? "no-flex" : ""}`}>
       <div className="product-item_img" onClick={goToProductDetail}>
         <img src={listImg[0].image} alt="" className="thumb" />
-        <Tag className="product-tag">New in</Tag>
+        <Tag className="product-tag">Mới</Tag>
       </div>
       <div className="product-item_info">
         <p className="title" onClick={goToProductDetail}>
@@ -60,7 +60,7 @@ function ProductItem({ className = "", noFlex = false, item }) {
               </div>
             </div>
           </div>
-          <p className="price">${round(item?.defaultPrice, 2)} USD</p>
+          <p className="price">{round(item?.defaultPrice, 2)} VNĐ</p>
         </div>
       </div>
     </div>

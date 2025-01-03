@@ -45,11 +45,11 @@ const SearchHeader = () => {
         />
         <SearchIcon />
         <span className="close-btn" onClick={closeSearch}>
-          Close
+          Đóng
         </span>
       </div>
       {debounceKey && (
-        <div className="total-result">We found {dataSource.length} results</div>
+        <div className="total-result">Chúng tôi tìm thấy {dataSource.length} kết quả</div>
       )}
       {dataSource.length > 0 ? (
         <ProductList col={4} bookList={dataSource} noFlex />

@@ -43,7 +43,7 @@ function SelectAddressModal({ isOpen, setIsOpen, address, setAddress }) {
       onCancel={handleClose}
     >
       <div className="account-title">
-        <h1>My address</h1>
+        <h1>Địa chỉ của tôi</h1>
       </div>
       <Button
         type="primary"
@@ -51,7 +51,7 @@ function SelectAddressModal({ isOpen, setIsOpen, address, setAddress }) {
           setOpen((prev) => ({ ...prev, type: "add" }));
         }}
       >
-        + Add New Address
+        + Thêm mới địa chỉ
       </Button>
       <Form onFinish={handleSubmit} initialValues={initValue}>
         <div className="address-container">

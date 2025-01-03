@@ -28,7 +28,7 @@ function Cart() {
     try {
       const res = await cartService.deleteCart({ id });
       if (res.status == 200) {
-        showMessage("success", "Delete Items successful!");
+        showMessage("success", "Xóa sản phẩm thành công!");
         fetchData();
       }
     } catch (error) {
@@ -37,7 +37,7 @@ function Cart() {
   };
   const column = [
     {
-      title: "Product",
+      title: "Sản phẩm",
       dataIndex: "product",
       key: "product",
       width: "45%",
@@ -55,7 +55,7 @@ function Cart() {
       ),
     },
     {
-      title: "Unit price",
+      title: "Đơn giá",
       dataIndex: "product",
       key: "product",
       align: "center",
@@ -64,7 +64,7 @@ function Cart() {
       render: (product) => <p>${product.price}</p>,
     },
     {
-      title: "Quantity",
+      title: "Số lượng",
       dataIndex: "qty",
       key: "qty",
       width: 115,
@@ -93,32 +93,32 @@ function Cart() {
             </Button>
           </Space>
 
-          <Text type="danger">{rec.product.quantity} items left</Text>
+          <Text type="danger">{rec.product.quantity} sản phẩm còn lại</Text>
         </div>
       ),
     },
     {
-      title: "Total",
+      title: "Thành tiền",
       dataIndex: "qty",
       key: "qty",
       align: "center",
       width: "120px",
       render: (val, rec) => (
         <p className="product-total">
-          $<NumberFormat value={val * rec.product.price} />{" "}
+          <NumberFormat value={val * rec.product.price} /> VNĐ{" "}
         </p>
       ),
     },
     {
-      title: "Actions",
+      title: "Hành động",
       dataIndex: "id",
       key: "id",
       align: "center",
       width: 80,
       render: (val) => (
         <Popconfirm
-          title="Delete item?"
-          description="Are you sure to delete this item?"
+          title="Xóa sản phẩm"
+          description="Bạn có chắc muốn xóa sản phẩm?"
           onConfirm={() => {
             handleDelete(val);
           }}
@@ -126,7 +126,7 @@ function Cart() {
           cancelText="No"
         >
           <Button type="link" danger>
-            Delete
+            Xóa
           </Button>
         </Popconfirm>
       ),
@@ -150,7 +150,7 @@ function Cart() {
 
   return (
     <div className="cart">
-      <h1 className="title">Cart</h1>
+      <h1 className="title">Giỏ hàng</h1>
       <div className="cart-item-container">
         <Table
           columns={column}
@@ -167,10 +167,10 @@ function Cart() {
       <div className="total">
         <Space className="total-amount">
           <h2>
-            Total (<NumberFormat value={totalQuantities} /> items):
+            Tổng tiền (<NumberFormat value={totalQuantities} /> sản phẩm):
           </h2>{" "}
           <h1 className="amount">
-            $<NumberFormat value={totalPrice} />{" "}
+            <NumberFormat value={totalPrice} /> VNĐ{" "}
           </h1>
         </Space>
         <button
@@ -180,7 +180,7 @@ function Cart() {
           }}
           disabled={selectedItemsKey.length <= 0}
         >
-          <span>Check out</span>
+          <span>Thanh toán</span>
         </button>
       </div>
     </div>

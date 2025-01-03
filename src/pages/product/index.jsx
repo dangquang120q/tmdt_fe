@@ -64,7 +64,7 @@ function ProductDetail() {
         <div className="product-detail-information">
           <h1 className="title">{product.name}</h1>
           <h2 className="price">
-            $ {round(selectedOption.price || product.defaultPrice, 2)} USD
+            {round(selectedOption.price || product.defaultPrice, 2)} VNĐ
           </h2>
           <div className="rate" style={{ display: "flex", gap: 20 }}>
             <Rate value={Math.round(product?.rate * 10) / 10} />
@@ -94,11 +94,11 @@ function ProductDetail() {
             </div>
           </div>
           <div className="quantity">
-            <p>Quantity</p>
+            <p>Số lượng</p>
             <AddToCart item={selectedOption} totalQty={totalAvailable} />
           </div>
           <div className="description-container">
-            <h1>Description</h1>
+            <h1>Mô tả</h1>
             <p>{product.description}</p>
           </div>
         </div>

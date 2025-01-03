@@ -18,7 +18,7 @@ function Pending() {
   }, [user.id]);
   return (
     <div className="purchase">
-      <h1>Processing</h1>
+      <h1>Đang xử lý</h1>
       <div className="purchase-container">
         {cancelled.length > 0 ? (
           cancelled.map((item, id) => {

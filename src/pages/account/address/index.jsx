@@ -49,7 +49,7 @@ function Address() {
   return (
     <div className="address profile">
       <div className="account-title">
-        <h1>My address</h1>
+        <h1>Địa chỉ nhận hàng</h1>
       </div>
       <Button
         type="primary"
@@ -57,7 +57,7 @@ function Address() {
           setOpen((prev) => ({ ...prev, type: "add" }));
         }}
       >
-        + Add New Address
+        + Thêm mới địa chỉ
       </Button>
       <div className="address-container">
         {list.length > 0 ? (
@@ -77,20 +77,20 @@ function Address() {
                     setOpen({ type: "edit", item: item });
                   }}
                 >
-                  Edit
+                  Sửa
                 </Button>{" "}
                 |
                 <Popconfirm
-                  title="Delete address?"
-                  description="Are you sure to delete this address?"
+                  title="Xóa địa chỉ"
+                  description="Bạn có chắc muốn xóa địa chỉ?"
                   onConfirm={() => {
                     handleDelete(item.id);
                   }}
-                  okText="Yes"
-                  cancelText="No"
+                  okText="Đồng ý"
+                  cancelText="Hủy"
                 >
                   <Button type="link" danger>
-                    Delete
+                    Xóa
                   </Button>
                 </Popconfirm>
               </div>

@@ -35,7 +35,7 @@ function Sidebar() {
           }`}
         >
           <BiUser fontSize={20} className="icon" />
-          <p>My account</p>
+          <p>Tài khoản cá nhân</p>
         </div>
         <NavLink
           to={ROUTE_URL.PROFILE}
@@ -44,7 +44,7 @@ function Sidebar() {
           }
           style={{ marginLeft: 25 }}
         >
-          <p>Profile</p>
+          <p>Hồ sơ</p>
         </NavLink>
         <NavLink
           to={ROUTE_URL.ADDRESS}
@@ -53,7 +53,7 @@ function Sidebar() {
           }
           style={{ marginLeft: 25 }}
         >
-          <p>Addresses</p>
+          <p>Địa chỉ</p>
         </NavLink>
         <NavLink
           to={ROUTE_URL.CART}
@@ -62,7 +62,7 @@ function Sidebar() {
           }
         >
           <IoCartOutline fontSize={20} className="icon" />
-          <p>Cart</p>
+          <p>Giỏ hàng</p>
         </NavLink>
 
         <NavLink
@@ -72,7 +72,7 @@ function Sidebar() {
           }
         >
           <IoReaderOutline fontSize={20} className="icon" />
-          <p>My Purchase</p>
+          <p>Lịch sử mua hàng</p>
         </NavLink>
 
         <div
@@ -83,7 +83,7 @@ function Sidebar() {
           }}
         >
           <IoExitOutline fontSize={20} className="icon" />
-          <p>Logout</p>
+          <p>Đăng xuất</p>
         </div>
       </div>
     </div>

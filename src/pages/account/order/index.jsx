@@ -108,56 +108,56 @@ const Order = () => {
       ),
     },
     {
-      title: "Unit price",
+      title: "Đơn giá",
       dataIndex: "price",
       key: "price",
       align: "center",
     },
     {
-      title: "Quantity",
+      title: "Số lượng",
       dataIndex: "qty",
       key: "qty",
       width: 115,
       align: "center",
     },
     {
-      title: "Sub Total",
+      title: "Đơn giá",
       dataIndex: "qty",
       key: "qty",
       align: "center",
       render: (val, rec) => (
         <p className="product-total">
-          $<NumberFormat value={val * rec.price} />{" "}
+          <NumberFormat value={val * rec.price} /> VNĐ {" "}
         </p>
       ),
     },
   ];
   const priceItem = [
     {
-      title: "Merchandise Subtotal",
+      title: "Tổng tiền hàng",
       value: (
         <NumberFormat
           value={order.products?.reduce(
             (val, item) => val + item.price * item.qty,
             0
           )}
-          prefix="$"
+          prefix="VNĐ"
         />
       ),
     },
     {
-      title: "Shipping Fee",
-      value: <NumberFormat value={order.shipping?.value} prefix="$" />,
+      title: "Phí vận chuyển",
+      value: <NumberFormat value={order.shipping?.value} prefix="VNĐ" />,
     },
     {
       title: (
         <p className="order-voucher">
-          <p>Voucher Applied</p>
+          <p>Mã giảm giá áp dụng</p>
           <Tooltip
             title={
               order.voucher
                 ? order.voucher?.name + " - " + order.voucher?.description
-                : "No voucher applied"
+                : "Không có mã giảm giá áp dụng"
             }
           >
             <BsExclamationCircleFill />
@@ -173,14 +173,14 @@ const Order = () => {
           order.voucher?.discountAmount ||
           total * order.voucher?.discountPercent ||
           0;
-        return <NumberFormat value={value * -1} prefix="$" />;
+        return <NumberFormat value={value * -1} prefix="VNĐ" />;
       })(),
     },
     {
       title: "Order Total",
       value: (
         <div className="order-total">
-          <NumberFormat value={order.totalPrice} prefix="$" />
+          <NumberFormat value={order.totalPrice} prefix="VNĐ" />
         </div>
       ),
     },
@@ -202,10 +202,10 @@ const Order = () => {
             navigate(-1);
           }}
         >
-          <IoIosArrowBack /> <span>Back</span>
+          <IoIosArrowBack /> <span>Quay lại</span>
         </Button>
         <Space>
-          <p className="order-id">Order ID: {id}</p> |
+          <p className="order-id">Mã đơn hàng: {id}</p> |
           <p className="order-status">
             {ORDER_STATUS.find((item) => item.value == order.status)?.desc}
           </p>
@@ -216,7 +216,7 @@ const Order = () => {
         <Row gutter={30}>
           <Col span={14}>
             <div className="order-delivery">
-              <h3>Delivery Address:</h3>
+              <h3>Địa chỉ nhận hàng:</h3>
               <p>
                 {order.address?.name} - {order.address?.phone}
               </p>
@@ -226,7 +226,7 @@ const Order = () => {
 
           <Col span={10}>
             <div className="order-shipping-type">
-              <h3>Shipping Type:</h3>
+              <h3>Phương thức vận chuyển:</h3>
               <p>
                 {order.shipping?.name} - ${order.shipping?.value}
               </p>

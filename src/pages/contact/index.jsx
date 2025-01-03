@@ -22,15 +22,14 @@ function ContactPage() {
   return (
     <div className="contact-page">
       <div className="page-title">
-        <h1>Contact</h1>
+        <h1>Liên hệ</h1>
       </div>
       <div className="contact-form">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h1>We would love to hear from you</h1>
+            <h1>Chúng tôi sẽ lắng nghe bạn</h1>
             <p className="desc mg-20">
-              Your email address will not be published. Required fields are
-              marked *
+              Email của bạn sẽ được ẩn danh. Xin hãy tích vào dấu *
             </p>
           </div>
           <FormItem
@@ -56,7 +55,7 @@ function ContactPage() {
               <p className="error-text">{errors.message?.message}</p>
             )}
           </div>
-          <button className="app-button w-max-content">Submit </button>
+          <button className="app-button w-max-content">Gửi </button>
         </form>
       </div>
     </div>

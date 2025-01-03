@@ -227,7 +227,7 @@ const expItem = {
     },
   ],
   requires_shipping: true,
-  currency: "USD",
+  currency: "VNĐ",
   items_subtotal_price: 1790,
   cart_level_discount_applications: [],
 };
@@ -254,11 +254,11 @@ export const shipping = [
 export const payment = [
   {
     value: "cash",
-    label: "Cash on Delivery",
+    label: "Thanh toán khi nhận hàng",
   },
   {
     value: "zalopay",
-    label: "Cash on Zalo Pay",
+    label: "Thanh toán bằng Zalo Pay",
   },
 ];
 

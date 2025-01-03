@@ -49,11 +49,11 @@ function Header() {
   const userMenu = [
     {
       key: 1,
-      label: <Link to={ROUTE_URL.PROFILE}>My Account</Link>,
+      label: <Link to={ROUTE_URL.PROFILE}>Tài khoản cá nhân</Link>,
     },
     {
       key: 2,
-      label: <Link to={ROUTE_URL.PURCHASE}>My Purchase</Link>,
+      label: <Link to={ROUTE_URL.PURCHASE}>Lịch sử mua hàng</Link>,
     },
     {
       key: 3,
@@ -63,7 +63,7 @@ function Header() {
             logout();
           }}
         >
-          Logout
+          Đăng xuất
         </p>
       ),
     },
@@ -89,8 +89,7 @@ function Header() {
           <IoLogoInstagram />
         </div>
         <div className="announcement-bar_midle">
-          <b>Free shipping</b> on orders +$30 & <b>Free gift</b> on orders
-          +$50🎁
+          <b>Cửa hàng mỹ phẩm</b>
         </div>
         <div className="announcement-bar_right"></div>
       </div>
@@ -150,7 +149,7 @@ function Header() {
                     setIsModalOpen(true);
                   }}
                 >
-                  Login
+                  Đăng nhập
                 </Button>
               )}
             </div>

@@ -71,11 +71,11 @@ function Checkout() {
         }
         fetchData && fetchData();
       } else {
-        showMessage("error", "Place order failed!");
+        showMessage("error", "Đặt hàng thất bại!");
       }
     } catch (error) {
       console.log(error);
-      showMessage("error", "Place order failed!");
+      showMessage("error", "Đặt hàng thất bại!");
     }
   };
 
@@ -84,7 +84,7 @@ function Checkout() {
   }, [id]);
   const column = [
     {
-      title: <h2 className="table-title">Product Ordered</h2>,
+      title: <h2 className="table-title">Sản phẩm đã đặt</h2>,
       dataIndex: "product",
       key: "product",
       width: "45%",
@@ -99,7 +99,7 @@ function Checkout() {
       ),
     },
     {
-      title: "Unit price",
+      title: "Đơn giá",
       dataIndex: "product",
       key: "product",
       align: "center",
@@ -107,21 +107,21 @@ function Checkout() {
       render: (product) => <p>${product.price}</p>,
     },
     {
-      title: "Amount",
+      title: "Số lượng",
       dataIndex: "qty",
       key: "qty",
       width: "10%",
       align: "center",
     },
     {
-      title: "Sub Total",
+      title: "Thành tiền",
       dataIndex: "qty",
       key: "qty",
       align: "center",
       width: "10%",
       render: (val, rec) => (
         <p className="product-total">
-          $<NumberFormat value={val * rec.product.price} />{" "}
+          <NumberFormat value={val * rec.product.price} /> VNĐ {" "}
         </p>
       ),
     },
@@ -129,11 +129,11 @@ function Checkout() {
 
   return (
     <div className="checkout">
-      <h1 className="title">Checkout</h1>
+      <h1 className="title">Thanh toán</h1>
       <Form form={form} onFinish={handleSubmit}>
         <div className="delivery-address-border" />
         <div className="delivery-address">
-          <h2>Delivery Address</h2>
+          <h2>Địa chỉ giao hàng</h2>
           <Space>
             <Space className="address-info">
               <b>
@@ -147,7 +147,7 @@ function Checkout() {
                 setOpen(true);
               }}
             >
-              Change
+              Thay đổi
             </Button>
           </Space>
         </div>
@@ -159,24 +159,24 @@ function Checkout() {
             pagination={false}
           />
           <Space className="total">
-            <p>Order Total ({totalQuantities} items):</p>
+            <p>Tổng tiền ({totalQuantities} sản phẩm):</p>
             <b>
-              $<NumberFormat value={totalPrice} />
+              <NumberFormat value={totalPrice} /> VNĐ
             </b>
           </Space>
         </div>
         <div className="shipping-voucher">
           <div className="shipping">
             <div className="shipping-total">
-              <h2>Shipping Option:</h2>
-              <b>${info.shippingValue}</b>
+              <h2>Phương thức vận chuyển:</h2>
+              <b>{info.shippingValue} VNĐ</b>
             </div>
             <Form.Item
               name="shippingTypeId"
               rules={[
                 {
                   required: true,
-                  message: "You haven't selected shipping type",
+                  message: "Bạn chưa chọn phương thức vận chuyển nào",
                 },
               ]}
             >
@@ -210,7 +210,7 @@ function Checkout() {
           <div className="voucher">
             <div className="voucher-title">
               <BsTicketPerforated size={20} />
-              <h2>Voucher</h2>
+              <h2>Mã giảm giá</h2>
             </div>
             <div className="voucher-input">
               <Form.Item name="voucherId">
@@ -245,7 +245,7 @@ function Checkout() {
         </div>
         <div className="payment">
           <div className="payment-method">
-            <h2>Payment method</h2>
+            <h2>Phương thức thanh toán</h2>
             <Form.Item name="paymentMethod">
               <Select
                 options={payment}
@@ -267,24 +267,24 @@ function Checkout() {
               <Col span={18}></Col>
               <Col span={3}>
                 <div className="total-name">
-                  <p>Merchandise Subtotal:</p>
-                  <p>Shipping Total:</p>
-                  <p>Voucher Discount:</p>
-                  <p>Total Payment:</p>
+                  <p>Tổng tiền hàng:</p>
+                  <p>Tổng tiền phí vận chuyển:</p>
+                  <p>Mã giảm giá:</p>
+                  <p>Tổng tiền:</p>
                 </div>
               </Col>
               <Col span={3}>
                 <div className="total-value">
                   <p>
-                    $<NumberFormat value={totalPrice} />
+                    <NumberFormat value={totalPrice} /> VNĐ
                   </p>
-                  <p>${info.shippingValue}</p>
-                  <p>-${info.voucher}</p>
+                  <p>{info.shippingValue}</p> VNĐ
+                  <p>-{info.voucher}</p> VNĐ
                   <h2>
-                    $
                     <NumberFormat
                       value={totalPrice + info.shippingValue - info.voucher}
                     />
+                     VNĐ
                   </h2>
                 </div>
               </Col>
@@ -293,7 +293,7 @@ function Checkout() {
               <Col span={18}></Col>
               <Col span={6}>
                 <Button type="primary" className="btn-order" htmlType="submit">
-                  Place Order
+                  Thanh toán
                 </Button>
               </Col>
             </Row>

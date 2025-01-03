@@ -32,10 +32,10 @@ function ShopPage() {
   return (
     <div className="shop-page">
       <div className="filter">
-        <div className="filter-title">
+        {/* <div className="filter-title">
           <HiOutlineAdjustmentsHorizontal />
           <p>Filter</p>
-        </div>
+        </div> */}
       </div>
       <div className="book-container">
         {isLoading ? (

@@ -14,7 +14,7 @@ function AddToCart({ item, totalQty }) {
     if (item.id) {
       await onAdd(item, value);
     } else {
-      showMessage("warning", "You have to select option");
+      showMessage("warning", "Bạn phải chọn phân loại");
     }
   };
 
@@ -43,12 +43,12 @@ function AddToCart({ item, totalQty }) {
             +
           </div>
         </div>
-        <p>{item.id ? item.quantity : totalQty} products available</p>
+        <p>{item.id ? item.quantity : totalQty} sản phẩm còn lại</p>
       </Space>
       <br />
       {value > item.quantity && item.id && (
         <Text type="danger">
-          Quantity selected is more than product available!
+          Số lượng chọn lớn hơn số lượng còn lại!
         </Text>
       )}
       <Button
@@ -57,7 +57,7 @@ function AddToCart({ item, totalQty }) {
         onClick={handleAddCart}
         disabled={value > item.quantity && item.id}
       >
-        <span>Add to cart</span>
+        <span>Thêm vào giỏ hàng</span>
       </Button>
     </div>
   );

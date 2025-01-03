@@ -13,14 +13,14 @@ const OrderItem = ({ order, fetchData }) => {
 
   const column = [
     {
-      title: "No",
+      title: "Mã",
       dataIndex: "id",
       key: "id",
       align: "center",
       render: (_val, _rec, id) => <p>{id + 1}</p>,
     },
     {
-      title: "Product",
+      title: "Sản phẩm",
       dataIndex: "id",
       key: "id",
       width: "45%",
@@ -38,20 +38,20 @@ const OrderItem = ({ order, fetchData }) => {
       ),
     },
     {
-      title: "Unit price",
+      title: "Đơn giá",
       dataIndex: "price",
       key: "price",
       align: "center",
     },
     {
-      title: "Quantity",
+      title: "Số lượng",
       dataIndex: "qty",
       key: "qty",
       width: 115,
       align: "center",
     },
     {
-      title: "Sub Total",
+      title: "Thành tiền",
       dataIndex: "qty",
       key: "qty",
       align: "center",
@@ -62,7 +62,7 @@ const OrderItem = ({ order, fetchData }) => {
       ),
     },
     {
-      title: "Review",
+      title: "Đánh giá",
       dataIndex: "id",
       key: "id",
       hiden: order.status != "Completed",
@@ -82,36 +82,36 @@ const OrderItem = ({ order, fetchData }) => {
   ].filter((item) => !item.hiden);
   const handleCancel = async () => {
     try {
-      const loading = showMessage("loading", "Loading...");
+      const loading = showMessage("loading", "Đang tải...");
       const res = await orderService.updateOrderStatus({
         orderId: order.id,
         status: ORDER_STATUS[4].value,
       });
       if (res.status == 200) {
         message.destroy(loading);
-        showMessage("success", "Order canceled successfully!");
+        showMessage("success", "Hủy đơn hàng thành công!");
         fetchData();
       }
     } catch (error) {
       message.destroy(loading);
-      showMessage("error", "Cancel order failed!");
+      showMessage("error", "Hủy đơn hàng thất bại!");
     }
   };
   const handleReceived = async () => {
     try {
-      const loading = showMessage("loading", "Loading...");
+      const loading = showMessage("loading", "Đang tải...");
       const res = await orderService.updateOrderStatus({
         orderId: order.id,
         status: ORDER_STATUS[3].value,
       });
       if (res.status == 200) {
         message.destroy(loading);
-        showMessage("success", "Order received successfully!");
+        showMessage("success", "Xác nhận đơn hàng thành công!");
         fetchData();
       }
     } catch (error) {
       message.destroy(loading);
-      showMessage("error", "Confirm failed!");
+      showMessage("error", "Xác nhận đơn hàng thất bại!");
     }
   };
   return (
@@ -123,7 +123,7 @@ const OrderItem = ({ order, fetchData }) => {
             navigate(ROUTE_URL.PURCHASE + "/order/" + order.id);
           }}
         >
-          <p>Order ID:</p>
+          <p>Mã đơn hàng:</p>
           <b>{order.id}</b>
         </Space>
         <Space>
@@ -141,30 +141,30 @@ const OrderItem = ({ order, fetchData }) => {
         <div>
           {order.newStatus == "Processing" && (
             <Popconfirm
-              title="Cancel Order?"
-              description="Are you sure to cancel this order?"
+              title="Hủy đơn hàng"
+              description="Bạn có chắc muốn hủy đơn hàng?"
               onConfirm={handleCancel}
-              okText="Yes"
-              cancelText="No"
+              okText="Đồng ý"
+              cancelText="Thoát"
             >
-              <Button type="primary">Cancel</Button>
+              <Button type="primary">Hủy đơn hàng</Button>
             </Popconfirm>
           )}
           {order.newStatus == "Delivering" && (
             <Popconfirm
-              title="Received Order?"
-              description="Do you have received your order?"
+              title="Đã nhận được hàng"
+              description="Bạn xác nhận đã nhận được hàng?"
               onConfirm={handleReceived}
-              okText="Yes"
-              cancelText="No"
+              okText="Đồng ý"
+              cancelText="Thoát"
             >
-              <Button type="primary">Received Order</Button>
+              <Button type="primary">Đã nhận được hàng</Button>
             </Popconfirm>
           )}
         </div>
         <Space>
-          <p>Total:</p>
-          <b>${order.totalPrice}</b>
+          <p>Tổng tiền:</p>
+          <b>{order.totalPrice} VNĐ</b>
         </Space>
       </div>
     </div>

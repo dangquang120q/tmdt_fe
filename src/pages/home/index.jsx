@@ -25,7 +25,7 @@ function HomePage() {
               <p>SUNSET WATER GLOSS ON YOUR LIPS</p>
             </div>
             <Link to={ROUTE_URL.SHOP}>
-              <Button type="primary">SHOP NOW</Button>
+              <Button type="primary">Mua ngay</Button>
             </Link>
           </div>
 

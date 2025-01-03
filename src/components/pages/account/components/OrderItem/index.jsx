@@ -5,9 +5,9 @@ import CartItem from "../CartItem";
 
 function OrderItem({ item, pending = false }) {
   const handleCancel = async () => {
-    if (confirm("Do you want to cancel this order?")) {
+    if (confirm("Bạn có chắc chắn muốn hủy đơn hàng?")) {
       await axios.post(`http://localhost:8080/api/cancelled/${item.id}`);
-      toast.success("Cancelled !");
+      toast.success("Hủy đơn hàng thành công!");
       setTimeout(() => {
         location.reload();
       }, [500]);
@@ -26,10 +26,10 @@ function OrderItem({ item, pending = false }) {
       <p className="total">
         {pending && (
           <button className="app-button" onClick={handleCancel}>
-            Cancel
+            Hủy đơn hàng
           </button>
         )}
-        Total: <span>{item.total} $</span>
+        Tổng cộng: <span>{item.total} VNĐ</span>
       </p>
     </div>
   );

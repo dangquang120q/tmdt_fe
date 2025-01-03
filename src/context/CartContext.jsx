@@ -60,12 +60,12 @@ export const CartProvide = ({ children }) => {
       if (res.status == 200) {
         console.log(product);
         await fetchData(user.id);
-        showMessage("success", `${quantity} ${product.name} added to the cart`);
+        showMessage("success", `${quantity} ${product.name} đã thêm vào giỏ hàng`);
       } else {
-        showMessage("error", "Add to cart failed!");
+        showMessage("error", "Thêm vào giỏ hàng thất bại!");
       }
     } else {
-      showMessage("error", "Please login to add to cart !");
+      showMessage("error", "Đăng nhập để thêm sản phẩm vào giỏ hàng!");
     }
   };
 
@@ -78,7 +78,7 @@ export const CartProvide = ({ children }) => {
     if (res.data == "200") {
       fetchData(user.id);
     } else {
-      showMessage("error", "Delete not success !");
+      showMessage("error", "Xóa thất bại!");
     }
   };
   const updateQuantity = async (id, action) => {
@@ -91,7 +91,7 @@ export const CartProvide = ({ children }) => {
     try {
       const res = cartService.updateCart({ id, qty });
     } catch (error) {
-      showMessage("Update Cart Error!");
+      showMessage("Lỗi cập nhật đơn hàng!");
     }
   };
   const toggleQuantity = async (id, status) => {

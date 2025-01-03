@@ -65,7 +65,7 @@ function Comments({ bookid }) {
   }, [bookid]);
   return (
     <div className="comment-container">
-      <h1>Customer Reviews</h1>
+      <h1>Đánh giá của khách hàng</h1>
       <div className="rate-container">
         <div className="rate-average">
           <h2>
@@ -73,7 +73,7 @@ function Comments({ bookid }) {
           </h2>
           <div className="rate-average_info">
             <Rate value={review.rate_avg} />
-            <p>Based on {review.comments?.length} reviews</p>
+            <p>Dựa vào {review.comments?.length} đánh giá</p>
           </div>
         </div>
         <div className="star-distribution">
@@ -96,7 +96,7 @@ function Comments({ bookid }) {
         </div>
         <div className="rate-new-review-btn">
           <Button type="primary" onClick={handleWrireReview} disabled={!id}>
-            Write Review
+            Viết đánh giá
           </Button>
         </div>
       </div>

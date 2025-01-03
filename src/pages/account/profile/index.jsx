@@ -23,8 +23,8 @@ function Profile() {
     <div className="profile">
       {contextHolder}
       <div className="account-title">
-        <h1>My Profile</h1>
-        <p>Manage and protect your account</p>
+        <h1>Hồ sơ cá nhân</h1>
+        <p>Quản lý bảo vệ tài khoản</p>
       </div>
       <Form
         form={form}
@@ -35,35 +35,35 @@ function Profile() {
       >
         <Row gutter={30}>
           <Col span={14}>
-            <Form.Item label="Username" name="username">
+            <Form.Item label="Tên đăng nhập" name="username">
               <Input readOnly />
             </Form.Item>
             <Form.Item
-              label="Full name"
+              label="Tên đầy đủ"
               name="fullName"
-              rules={[{ required: true, message: "Full name is required!" }]}
+              rules={[{ required: true, message: "Tên đầy đủ không thể bỏ trống!" }]}
             >
               <Input />
             </Form.Item>
             <Form.Item label="Email" name="email">
               <Input readOnly />
             </Form.Item>
-            <Form.Item label="Phone" name="phone">
+            <Form.Item label="Số điện thoại" name="phone">
               <Input readOnly />
             </Form.Item>
-            <Form.Item label="Gender" name="gender">
+            <Form.Item label="Giới tính" name="gender">
               <Radio.Group>
-                <Radio value="male"> Male </Radio>
-                <Radio value="female"> Female </Radio>
-                <Radio value="other"> Other </Radio>
+                <Radio value="male"> Nam </Radio>
+                <Radio value="female"> Nữ </Radio>
+                <Radio value="other"> Khác </Radio>
               </Radio.Group>
             </Form.Item>
-            <Form.Item label="Date of birth" name="dob">
+            <Form.Item label="Ngày sinh" name="dob">
               <DatePicker />
             </Form.Item>
             <div className="d-flex justify-content-center">
               <Button type="primary" htmlType="submit">
-                Save
+                Lưu
               </Button>
             </div>
           </Col>
