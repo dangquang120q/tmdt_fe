@@ -61,7 +61,7 @@ function Checkout() {
 
       if (res.data.statusCode == 200) {
         console.log(value.paymentMethod);
-        if (value.paymentMethod = "Cash on Zalo Pay") {
+        if (value.paymentMethod == "Cash on Zalo Pay") {
           // console.log(res.data.data.msg);
           // window.href(`${res.data.data.msg}`);
           window.location.href = res.data.data.msg

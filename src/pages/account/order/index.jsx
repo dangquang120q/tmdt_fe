@@ -177,7 +177,7 @@ const Order = () => {
       })(),
     },
     {
-      title: "Order Total",
+      title: "Tổng tiền",
       value: (
         <div className="order-total">
           <NumberFormat value={order.totalPrice} prefix="VNĐ" />
@@ -185,7 +185,7 @@ const Order = () => {
       ),
     },
     {
-      title: "Payment Method",
+      title: "Phương thức thanh toán",
       value: order.paymentMethod,
     },
   ];
