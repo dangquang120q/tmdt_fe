@@ -67,6 +67,7 @@ function Checkout() {
           window.location.href = res.data.data.msg
         }
         else{
+          console.log(res.data.data.order_id)
           navigate(`/checkout-success/${res.data.data.order_id}`)
         }
         fetchData && fetchData();
