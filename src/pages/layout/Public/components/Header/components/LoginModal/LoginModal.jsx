@@ -26,7 +26,7 @@ function LoginModal({ open, setOpen }) {
             setToggle(true);
           }}
         >
-          Sign in
+          Đăng nhập
         </span>
         <span
           className={`login-form-title ${toggle ? "" : "active"}`}
@@ -34,7 +34,7 @@ function LoginModal({ open, setOpen }) {
             setToggle(false);
           }}
         >
-          Create an Account
+          Tạo tài khoản
         </span>
       </div>
       {toggle ? <LoginForm onCloseModal={handleClostModal} /> : <SignupForm />}

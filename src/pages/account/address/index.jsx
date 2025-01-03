@@ -97,7 +97,7 @@ function Address() {
             </div>
           ))
         ) : (
-          <Empty description="No address" />
+          <Empty description="" />
         )}
       </div>
       <AddressModal open={open} setOpen={setOpen} getListAddress={fetchData} />

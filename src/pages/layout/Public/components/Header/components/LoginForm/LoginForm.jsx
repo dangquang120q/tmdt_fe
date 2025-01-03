@@ -7,20 +7,20 @@ function LoginForm({ onCloseModal }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormItem
-        label="Username*"
+        label="Tên đăng nhập*"
         name="username"
         register={register}
         error={errors.username}
       />
       <FormItem
-        label="Password*"
+        label="Mật khẩu*"
         name="password"
         register={register}
         error={errors.password}
         type="password"
       />
       <button className="app-button" type="submit">
-        Login
+        Đăng nhập
       </button>
     </form>
   );

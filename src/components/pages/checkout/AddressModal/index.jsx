@@ -76,13 +76,13 @@ function SelectAddressModal({ isOpen, setIsOpen, address, setAddress }) {
               </Radio.Group>
             </Form.Item>
           ) : (
-            <Empty description="No address" />
+            <Empty description="Không có địa chỉ" />
           )}
         </div>
         <Space>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose}>Hủy</Button>
           <Button htmlType="submit" type="primary">
-            Confirm
+            Xác nhận
           </Button>
         </Space>
       </Form>

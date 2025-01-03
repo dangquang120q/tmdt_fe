@@ -8,13 +8,13 @@ function SignupForm() {
     <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
       {contextHolder}
       <FormItem
-        label="Username*"
+        label="Tên đăng nhập*"
         name="username"
         register={register}
         error={errors.username}
       />
       <FormItem
-        label="Fullname*"
+        label="Tên đầy đủ*"
         name="fullName"
         register={register}
         error={errors.fullName}
@@ -26,14 +26,14 @@ function SignupForm() {
         error={errors.email}
       />
       <FormItem
-        label="Phone number*"
+        label="Số điện thoại*"
         name="phone"
         register={register}
         error={errors.phone}
       />
       <div className="form-item gender">
         <label htmlFor="gender" className="label">
-          Gender:
+          Giới tính:
         </label>
         <div className="gender-option">
           <input
@@ -43,7 +43,7 @@ function SignupForm() {
             value="male"
             {...register("gender")}
           />
-          <label for="male">Male</label>
+          <label for="male">Nam</label>
         </div>
         <div className="gender-option">
           <input
@@ -53,7 +53,7 @@ function SignupForm() {
             value="female"
             {...register("gender")}
           />
-          <label for="femal">Female</label>
+          <label for="femal">Nữ</label>
         </div>
         <div className="gender-option">
           <input
@@ -63,26 +63,26 @@ function SignupForm() {
             value="other"
             {...register("gender")}
           />
-          <label for="other">Other</label>
+          <label for="other">Khác</label>
         </div>
       </div>
       <p className="error-text">{errors.gender?.message}</p>
       <FormItem
-        label="Password*"
+        label="Mật khẩu*"
         name="password"
         register={register}
         error={errors.password}
         type="password"
       />
       <FormItem
-        label="Confirm password*"
+        label="Xác nhận mật khẩu*"
         name="confirm"
         register={register}
         error={errors.confirm}
         type="password"
       />
 
-      <button className="app-button">Created</button>
+      <button className="app-button">Tạo tài khoản</button>
     </form>
   );
 }
