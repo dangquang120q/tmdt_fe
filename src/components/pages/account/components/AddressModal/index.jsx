@@ -21,7 +21,7 @@ function AddressModal({ open, setOpen, getListAddress }) {
         console.log(value);
         const res = await cartService.addAddress(value);
         if (res.status == 200) {
-          showMessage("success", "Add address successful!");
+          showMessage("success", "Thêm địa chỉ thành công!");
           getListAddress();
         }
       } catch (error) {
@@ -32,7 +32,7 @@ function AddressModal({ open, setOpen, getListAddress }) {
       try {
         const res = await cartService.editAddress(value);
         if (res.status == 200) {
-          showMessage("success", "Edit address successful!");
+          showMessage("success", "Sửa địa chỉ thành công!");
           getListAddress();
         }
       } catch (error) {
@@ -56,34 +56,34 @@ function AddressModal({ open, setOpen, getListAddress }) {
       className="address-modal"
       destroyOnClose
     >
-      <h1>{open.type == "add" ? "New Address" : "Edit Address"}</h1>
+      <h1>{open.type == "add" ? "Thêm địa chỉ" : "Edit Address"}</h1>
       <Form layout="vertical" onFinish={handleSubmit} initialValues={initValue}>
         <Form.Item
           name="name"
-          label="Full Name"
-          rules={[{ required: true, message: "Full Name is required!" }]}
+          label="Tên đầy đủ"
+          rules={[{ required: true, message: "Tên đầy đủ không được bỏ trống!" }]}
         >
           <Input placeholder="Full Name" size="large" />
         </Form.Item>
         <Form.Item
           name="phone"
-          label="Phone Number"
-          rules={[{ required: true, message: "Phone number is required!" }]}
+          label="Số điện thoại"
+          rules={[{ required: true, message: "Só điện thoại không được bỏ trống!" }]}
         >
           <Input placeholder="Phone Number" size="large" />
         </Form.Item>
         <Form.Item
           name="address"
-          label="Detail Address"
-          rules={[{ required: true, message: "Address is required!" }]}
+          label="Địa chỉ cụ thể"
+          rules={[{ required: true, message: "Địa chỉ không được bỏ trống!" }]}
         >
           <TextArea placeholder="Detail Address" size="large" />
         </Form.Item>
-        <Form.Item name="type" label="Label As">
+        <Form.Item name="type" label="Loại địa chỉ">
           <Radio.Group>
-            <Radio value="Home"> Home </Radio>
-            <Radio value="Office"> Office </Radio>
-            <Radio value="Other"> Other </Radio>
+            <Radio value="Home"> Nhà riêng </Radio>
+            <Radio value="Office"> Văn phòng </Radio>
+            <Radio value="Other"> Khác </Radio>
           </Radio.Group>
         </Form.Item>
         <Space className="button-container">

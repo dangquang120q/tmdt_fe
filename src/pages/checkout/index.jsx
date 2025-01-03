@@ -40,7 +40,7 @@ function Checkout() {
 
   const handleSubmit = async (value) => {
     if (!address.id) {
-      showMessage("warning", "You haven't selected address");
+      showMessage("warning", "Bạn chưa chọn địa chỉ!");
       return;
     }
     if(value.paymentMethod == "zalopay"){

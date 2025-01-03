@@ -42,7 +42,7 @@ const Feedback = () => {
   };
   return (
     <div className="feedback">
-      <h1 className="title">Website Feedback</h1>
+      <h1 className="title">Đánh giá hệ thống</h1>
       <div
         className="feedback-container"
         style={{ paddingBottom: writeRef.current?.clientHeight }}
@@ -89,10 +89,10 @@ const Feedback = () => {
             className="content"
             rules={[{ required: true, message: "Content is empty!" }]}
           >
-            <Input.TextArea placeholder="Enter feedback" />
+            <Input.TextArea placeholder="Nhập đánh giá" />
           </Form.Item>
           <Button type="primary" htmlType="submit" disabled={!id}>
-            Send
+            Gửi
           </Button>
         </Form>
       </div>

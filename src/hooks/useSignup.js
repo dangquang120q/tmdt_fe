@@ -50,16 +50,16 @@ export const useSignup = () => {
         name: fullName,
       });
       if (res?.status == 200) {
-        messageApi.success("Signup successfully!");
+        messageApi.success("Đăng ký thành công!");
         reset();
       } else {
-        messageApi.error("Signup failed!");
+        messageApi.error("Đăng ký thất bại!");
       }
     } catch (err) {
       const msg =
         err.response.status == 402
           ? err.response.data.data.msg
-          : "Signup failed!";
+          : "Đăng ký thất bại!";
       messageApi.error(msg);
     }
   };
